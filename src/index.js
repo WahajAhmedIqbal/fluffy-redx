@@ -4,16 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { rootReducer } from './redux/reducers'
+import { todoReducer } from './redux/reducers/todoReducer'
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(todoReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>,
+  </Provider>
+  ,
   // <React.StrictMode>
   // </React.StrictMode>,
   document.getElementById('root')

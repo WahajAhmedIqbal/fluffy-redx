@@ -1,25 +1,13 @@
-export const increment = () => {
+export const addItem = (payload) => {
     return {
-        type: 'INCREMENT'
-    }
-}
-
-
-export const  decrement = () => {
-    return {
-        type: 'DECREMENT'
-    }
-}
-
-export const islogged = () => {
-    return {
-        type: 'SIGN_IN'
-    }
-}
-
-export const emailReducer = (payload) => {
-    return {
-        type: 'ADD_EMAIL',
+        type: 'ADD_ITEM',
         payload
+    }
+}
+
+export const deleteItem = (id) => {
+    return {
+        type: 'DELETE_ITEM',
+        payload: id
     }
 }
